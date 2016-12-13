@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://wangfangyijie.cn/2016/12/13/Configure-custom-DNS-with-Hexo/index.html">
 <meta property="og:site_name" content="Fang's Blog">
 <meta property="og:description" content="While using Hexo to set up a github.io blog, the default domain name is [your-github-username].github.io. To use a custom DNS for your personal blog, Github requires you to create a file named CNAME i">
-<meta property="og:updated_time" content="2016-12-13T01:55:05.000Z">
+<meta property="og:updated_time" content="2016-12-13T01:58:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Configure custom DNS with Hexo">
 <meta name="twitter:description" content="While using Hexo to set up a github.io blog, the default domain name is [your-github-username].github.io. To use a custom DNS for your personal blog, Github requires you to create a file named CNAME i">
@@ -275,7 +275,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-13T01:33:01Z">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-13T01:33:01+00:00">
                 2016-12-13
               </time>
             
@@ -312,11 +312,12 @@
 
       
         <p>While using Hexo to set up a github.io blog, the default domain name is [your-github-username].github.io. To use a custom DNS for your personal blog, Github requires you to create a file named CNAME in master branch of your repository. Since Hexo3, if you simply added the CNAME file manually it would be overwritten at deployment time. So you could use Hexo plugin: <a href="https://github.com/leecrossley/hexo-generator-cname" target="_blank" rel="external">hexo-generator-cname</a>.</p>
+<a id="more"></a>
 <p>##Install<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-generator-cname --save</div></pre></td></tr></table></figure></p>
 <p>##Enable<br>Add hexo-generator-cname to plugins in _config.yml.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ plugins: hexo-generator-cname</div></pre></td></tr></table></figure></p>
 <p>##Configure domain name in _config.yml<br>Go to _config.yml file, and find the variable url. Configure your custom domain name like below.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url: http://[your-custom-domain-name]</div></pre></td></tr></table></figure></p>
 <p>When you run <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure> again, a CNAME file containing your custom domain name configured just now in _config.yml will be created.</p>
-<p>Then you need to login to your DNS provider and create a DNS CNAME record pointing hostname www to your-github-username.github.io. Here is a DNS provider I used before<a href="https://intl.aliyun.com/" target="_blank" rel="external">wanwang</a>. It will take a couple hours to replicate default domain name with the custom one.</p>
+<p>Then you need to login to your DNS provider and create a DNS CNAME record pointing hostname www to your-github-username.github.io. Here is a DNS provider I used before <a href="https://intl.aliyun.com/" target="_blank" rel="external">wanwang</a>. It will take a couple hours to replicate default domain name with the custom one.</p>
 
       
     </div>
