@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Tech,Git,Github,Git push," />
+  <meta name="keywords" content="Tech,Pyhton2,Python3,Windows7," />
 
 
 
@@ -84,21 +84,19 @@
 
 
 
-<meta name="description" content="It’s been a long time since I started playing with Github, but today I was facing a really wired git error when I tried to push my changes to origin/master branch. Because I’m not a professional guy i">
+<meta name="description" content="This post will introduce how to install Python 2 and Python 3 together in Windows 7 on the same PC.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git error - current branch is behind its remote counterpart">
-<meta property="og:url" content="http://wangfangyijie.cn/2017/01/31/Git-error-current-branch-is-behind-its-remote-counterpart/index.html">
+<meta property="og:title" content="How to install python2 & 3 together in Windows">
+<meta property="og:url" content="http://wangfangyijie.cn/2017/06/20/How-to-install-python2-3-together-in-Windows/index.html">
 <meta property="og:site_name" content="Fangyijie Wang">
-<meta property="og:description" content="It’s been a long time since I started playing with Github, but today I was facing a really wired git error when I tried to push my changes to origin/master branch. Because I’m not a professional guy i">
-<meta property="og:image" content="http://wangfangyijie.cn/images/2017_01_31_img_01.png">
-<meta property="og:image" content="http://wangfangyijie.cn/images/2017_01_31_img_02.png">
-<meta property="og:image" content="http://wangfangyijie.cn/images/2017_01_31_img_01.png">
-<meta property="og:image" content="http://wangfangyijie.cn/images/2017_01_31_img_03.png">
-<meta property="og:updated_time" content="2017-02-01T01:27:20.000Z">
+<meta property="og:description" content="This post will introduce how to install Python 2 and Python 3 together in Windows 7 on the same PC.">
+<meta property="og:image" content="http://wangfangyijie.cn/images/2017_06_20_py_02.JPG">
+<meta property="og:image" content="http://wangfangyijie.cn/images/2017_06_20_py_01.JPG">
+<meta property="og:updated_time" content="2017-06-20T22:48:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git error - current branch is behind its remote counterpart">
-<meta name="twitter:description" content="It’s been a long time since I started playing with Github, but today I was facing a really wired git error when I tried to push my changes to origin/master branch. Because I’m not a professional guy i">
-<meta name="twitter:image" content="http://wangfangyijie.cn/images/2017_01_31_img_01.png">
+<meta name="twitter:title" content="How to install python2 & 3 together in Windows">
+<meta name="twitter:description" content="This post will introduce how to install Python 2 and Python 3 together in Windows 7 on the same PC.">
+<meta name="twitter:image" content="http://wangfangyijie.cn/images/2017_06_20_py_02.JPG">
 
 
 
@@ -126,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wangfangyijie.cn/2017/01/31/Git-error-current-branch-is-behind-its-remote-counterpart/"/>
+  <link rel="canonical" href="http://wangfangyijie.cn/2017/06/20/How-to-install-python2-3-together-in-Windows/"/>
 
 
 
 
 
-  <title> Git error - current branch is behind its remote counterpart | Fangyijie Wang </title>
+  <title> How to install python2 & 3 together in Windows | Fangyijie Wang </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -243,7 +241,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://wangfangyijie.cn/2017/01/31/Git-error-current-branch-is-behind-its-remote-counterpart/">
+  <link itemprop="mainEntityOfPage" href="http://wangfangyijie.cn/2017/06/20/How-to-install-python2-3-together-in-Windows/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Fangyijie Wang">
@@ -267,7 +265,7 @@
             
             
               
-                Git error - current branch is behind its remote counterpart
+                How to install python2 & 3 together in Windows
               
             
           </h1>
@@ -280,8 +278,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-31T23:06:58Z">
-                2017-01-31
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-20T22:47:09+01:00">
+                2017-06-20
               </time>
             
 
@@ -316,32 +314,21 @@
       
 
       
-        <p>It’s been a long time since I started playing with Github, but today I was facing a really wired git error when I tried to push my changes to origin/master branch. Because I’m not a professional guy in terms of git, I spent some time to figure it out and fix it. Here is the git error I met.</p>
-<p>The error is below<br>error: faild to push some refs to ‘[my-github-repository]’</p>
-<p><img src="/images/2017_01_31_img_01.png" alt="git error I had when push codes"></p>
+        <p>This post will introduce how to install Python 2 and Python 3 together in Windows 7 on the same PC.</p>
 <a id="more"></a>
-<p>Based on above screenshot, the hint message says “Updates were rejected because the tip of your current branch is behind its remote counterpart”. It’s strange because in my repository there is only one branch “master”. </p>
-<p>So I tried to checkout my current branch and also check git status, everything looks good.</p>
-<p><img src="/images/2017_01_31_img_02.png" alt=""></p>
-<p>Then I also tried to pull from remote origin/master branch. </p>
-<p>But unfortunately I got the same error message. </p>
-<p><img src="/images/2017_01_31_img_01.png" alt="same error message"></p>
-<p>Actually I googled the solution to this error. There is one risk solution I found but a easy way to solve current problem.</p>
-<p>What you need to do is force your commit with below command:</p>
-<pre><code class="bash">$ git push <span class="_">-f</span>
-</code></pre>
-<p><strong>NOTE</strong>: This command has the risk of losing others changes. It can cause remote repository to lose commits.</p>
-<p>In my case, I didn’t have other commits, so I use this way to solve the error.</p>
-<p><img src="/images/2017_01_31_img_03.png" alt="force push"></p>
-<p>Meanwhile there is another safety way to solve the problem. If you use below commands to set upstream, when push codes to remote agian, the error will be gone.</p>
-<pre><code class="bash">git branch --set-upstream to=origin/master
-git push origin &lt;local_branch_name&gt;
-</code></pre>
-<p>Also set upstream for pull </p>
-<pre><code class="bash">git branch --set-upstream to=origin/&lt;local_branch_name&gt; 
-git pull origin &lt;local_branch_name&gt;
-</code></pre>
-<p>Hope them will help when you are facing the same git error with me.</p>
+<h2 id="Download-Python2-amp-3"><a href="#Download-Python2-amp-3" class="headerlink" title="Download Python2 &amp; 3"></a>Download Python2 &amp; 3</h2><p>Nevigate to <a href="https://www.python.org/" target="_blank" rel="external">Python official website</a> and download latest Python2 installer and Python3 installer. Please choose the correct version for your Windows 7 system. For example, my Windows 7 is 64 bit, so I would choose <strong>Windows x86-64 MSI installer</strong> version for Python2 and <strong>Windows x86-64 executable installer</strong> for Python3.</p>
+<h2 id="Install-Python2-amp-3"><a href="#Install-Python2-amp-3" class="headerlink" title="Install Python2 &amp; 3"></a>Install Python2 &amp; 3</h2><p>Run the two installers which you just downloaded. When you install Python3, there is an option you could choose to add Python3 to environment variables PATH, or please go to next step to add Python2 &amp; 3 to environment variables.</p>
+<h2 id="Add-Python-to-environment-variables"><a href="#Add-Python-to-environment-variables" class="headerlink" title="Add Python to environment variables"></a>Add Python to environment variables</h2><p>Right Click on My Computer and go to Properties. Go to Advanced System Settings. Click on Environment Variables and edit PATH and add the path to your Python 3 and Python 2 installation directories.</p>
+<p>Please see below PATH variable on my computer.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C:\python3\Scripts\;C:\python3\;C:\pyhton2;......</div></pre></td></tr></table></figure></p>
+<h2 id="IMPORTANT-Copy-python-exe-to-python3-exe-or-python2-exe"><a href="#IMPORTANT-Copy-python-exe-to-python3-exe-or-python2-exe" class="headerlink" title="(IMPORTANT) Copy python.exe to python3.exe or python2.exe"></a><strong>(IMPORTANT)</strong> Copy python.exe to python3.exe or python2.exe</h2><p>Now if you go to Windows command line and type below command<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyhon --version</div></pre></td></tr></table></figure></p>
+<p>the output should be like this</p>
+<p><img src="/images/2017_06_20_py_02.JPG" alt="only one python version shown up"></p>
+<p>There is only one Pyhton version shown up. If the Python version is shown as 2.7.13, go to Python 3 installation directory (mine is C:\python3). And copy python.exe to the same directory. Rename the copied exe file as python3.exe. Do the similar for Python2, but rename the copied exe file as python2.exe in Python 2 installation directory.</p>
+<p>Then go to Windows command line again, try to type below two commands and check their outputs.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">python2 --version</div><div class="line">python3 --version</div></pre></td></tr></table></figure></p>
+<p>Hopefully you could get the same results as below</p>
+<p><img src="/images/2017_06_20_py_01.JPG" alt="two python versions shown up"></p>
+<p>As you can see Python 2 and 3 are both available now on the same computer. To use them, run python2 to call Python 2 or python3 to call Python 3.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">python2 HelloWorld.py</div><div class="line">python3 HelloWorld.py</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -367,11 +354,11 @@ git pull origin &lt;local_branch_name&gt;
           
             <a href="/tags/Tech/" rel="tag"># Tech</a>
           
-            <a href="/tags/Git/" rel="tag"># Git</a>
+            <a href="/tags/Pyhton2/" rel="tag"># Pyhton2</a>
           
-            <a href="/tags/Github/" rel="tag"># Github</a>
+            <a href="/tags/Python3/" rel="tag"># Python3</a>
           
-            <a href="/tags/Git-push/" rel="tag"># Git push</a>
+            <a href="/tags/Windows7/" rel="tag"># Windows7</a>
           
         </div>
       
@@ -380,8 +367,8 @@ git pull origin &lt;local_branch_name&gt;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/13/Configure-custom-DNS-with-Hexo/" rel="next" title="Configure custom DNS with Hexo">
-                <i class="fa fa-chevron-left"></i> Configure custom DNS with Hexo
+              <a href="/2017/01/31/Git-error-current-branch-is-behind-its-remote-counterpart/" rel="next" title="Git error - current branch is behind its remote counterpart">
+                <i class="fa fa-chevron-left"></i> Git error - current branch is behind its remote counterpart
               </a>
             
           </div>
@@ -389,10 +376,6 @@ git pull origin &lt;local_branch_name&gt;
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/20/How-to-install-python2-3-together-in-Windows/" rel="prev" title="How to install python2 & 3 together in Windows">
-                How to install python2 & 3 together in Windows <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -439,8 +422,17 @@ git pull origin &lt;local_branch_name&gt;
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/6347700?v=3&s=400"
@@ -506,6 +498,22 @@ git pull origin &lt;local_branch_name&gt;
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Download-Python2-amp-3"><span class="nav-number">1.</span> <span class="nav-text">Download Python2 & 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Python2-amp-3"><span class="nav-number">2.</span> <span class="nav-text">Install Python2 & 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Add-Python-to-environment-variables"><span class="nav-number">3.</span> <span class="nav-text">Add Python to environment variables</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IMPORTANT-Copy-python-exe-to-python3-exe-or-python2-exe"><span class="nav-number">4.</span> <span class="nav-text">(IMPORTANT) Copy python.exe to python3.exe or python2.exe</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
