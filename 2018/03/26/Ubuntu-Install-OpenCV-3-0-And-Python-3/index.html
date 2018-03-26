@@ -1,0 +1,683 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Noto Sans:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Ubuntu,Python3,OpenCV,HowTo," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="A few days ago, I was playing around with some interesting object detection projects using OpenCV and Python3. In this blog, I’d like to share some issues I found during installation and development e">
+<meta name="keywords" content="Ubuntu,Python3,OpenCV,HowTo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu Install OpenCV 3.0 And Python 3">
+<meta property="og:url" content="http://wangfangyijie.cn/2018/03/26/Ubuntu-Install-OpenCV-3-0-And-Python-3/index.html">
+<meta property="og:site_name" content="Fangyijie Wang">
+<meta property="og:description" content="A few days ago, I was playing around with some interesting object detection projects using OpenCV and Python3. In this blog, I’d like to share some issues I found during installation and development e">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://wangfangyijie.cn/images/2018_03_virtual_env.png">
+<meta property="og:image" content="http://wangfangyijie.cn/images/2018_03_cmake_build.png">
+<meta property="og:image" content="http://wangfangyijie.cn/images/2018_03_opencv_vertification.png">
+<meta property="og:updated_time" content="2018-03-26T23:51:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ubuntu Install OpenCV 3.0 And Python 3">
+<meta name="twitter:description" content="A few days ago, I was playing around with some interesting object detection projects using OpenCV and Python3. In this blog, I’d like to share some issues I found during installation and development e">
+<meta name="twitter:image" content="http://wangfangyijie.cn/images/2018_03_virtual_env.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Fang'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://wangfangyijie.cn/2018/03/26/Ubuntu-Install-OpenCV-3-0-And-Python-3/"/>
+
+
+
+
+
+  <title> Ubuntu Install OpenCV 3.0 And Python 3 | Fangyijie Wang </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Fangyijie Wang</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://wangfangyijie.cn/2018/03/26/Ubuntu-Install-OpenCV-3-0-And-Python-3/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Fangyijie Wang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/6347700?v=3&s=400">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Fangyijie Wang">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Fangyijie Wang" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Ubuntu Install OpenCV 3.0 And Python 3
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-26T22:56:12+01:00">
+                2018-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>A few days ago, I was playing around with some interesting object detection projects using OpenCV and Python3. In this blog, I’d like to share some issues I found during installation and development environment setup.</p>
+<p>Details of my dev environment:</p>
+<ul>
+<li><strong>ubuntu 16.04 LTS</strong></li>
+<li><strong>Python 3.5.2</strong></li>
+<li><strong>OpenCV 3.1.0</strong></li>
+</ul>
+<p>Now, I’ll show you how to install them and set up a dev environment probably.</p>
+<h2 id="Install-dependencies"><a href="#Install-dependencies" class="headerlink" title="Install dependencies"></a>Install dependencies</h2><p>First there are lots of libs and dependencies before you start installing Python or OpenCV. Please see below lists of commands. It’s better to follow them step and step to install all of them.</p>
+<p>Upgrade any pre-installed packages:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get update</div><div class="line">sudo apt-get upgrade</div></pre></td></tr></table></figure></p>
+<p>Install tools to compile OpenCV 3.1.0:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install build-essential cmake git pkg-config</div></pre></td></tr></table></figure></p>
+<p>If you are going to develop object detection functionalities on images, then below libraries and packages are needed:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install libjpeg8-dev libtiff4-dev libjasper-dev libpng12-dev</div></pre></td></tr></table></figure></p>
+<p>Also, if you need to work on videos, below libraries are needed as well:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev</div></pre></td></tr></table></figure></p>
+<p>Install packages that are used to optimize various functions inside OpenCV, such as matrix operations:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install libatlas-base-dev gfortran</div></pre></td></tr></table></figure></p>
+<p>After you run above commands to install all libraries and packages without errors, you are ready to go next step - setting up Python environment.</p>
+<a id="more"></a>
+<h2 id="Set-up-virtual-environment-for-Python-development"><a href="#Set-up-virtual-environment-for-Python-development" class="headerlink" title="Set up virtual environment for Python development"></a>Set up virtual environment for Python development</h2><p><em>NOTE: It’s highly recomended to always use virtual environment for Python development. But if you still don’t want to use virtual environment, you could skip this part.</em></p>
+<p>Here I’m going to use <a href="https://virtualenv.pypa.io/en/latest/" target="_blank" rel="external">virtualenv</a> and <a href="https://virtualenvwrapper.readthedocs.io/en/latest/" target="_blank" rel="external">virtualenvwrapper</a>. They will help us create separate and independent Python environments, so that we don’t junk up our system Python install. Moreover we can have a separate Python environment for each of our projects). </p>
+<p>Get pip using below commands: (You need to indicate Python3 inside the commands)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">wget https://bootstrap.pypa.io/get-pip.py</div><div class="line">sudo python3 get-pip.py</div></pre></td></tr></table></figure></p>
+<p>Install and setup virtualenv and virtualenvwrapper:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo pip3 install virtualenv virtualenvwrapper</div></pre></td></tr></table></figure></p>
+<p>Update <em>~/.bashrc</em> file. Below commands need to be appended to the file:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># virtualenv and virtualenvwrapper</span></div><div class="line"><span class="built_in">export</span> VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3</div><div class="line"><span class="built_in">export</span> WORKON_HOME=<span class="variable">$HOME</span>/.virtualenvs</div><div class="line"><span class="built_in">source</span> /usr/<span class="built_in">local</span>/bin/virtualenvwrapper.sh</div></pre></td></tr></table></figure></p>
+<p>It’s pointing <em>VIRTUALENVWRAPPER_PYTHON</em> to where Python3.5 binary exists on Ubuntu system. Next is to reload <em>~/.bashrc</em> file:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> ~/.bashrc</div></pre></td></tr></table></figure></p>
+<p>Create <em>cv</em> virtual environment where you could work on object detection projects using OpenCV and Python.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkvirtualenv cv</div></pre></td></tr></table></figure></p>
+<p>To test if the virtual environment is created successfully, open another terminal, type commands:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">workon cv</div></pre></td></tr></table></figure></p>
+<p>If you see <em>cv</em> at the begining of our terminal, it means you have set up virtual environment to use OpenCV and Python successfully.<br><img src="/images/2018_03_virtual_env.png" alt="virtual env setup"></p>
+<h2 id="Install-Python3-5"><a href="#Install-Python3-5" class="headerlink" title="Install Python3.5"></a>Install Python3.5</h2><p>Now we have a virtual environment available for Python development. Let’s install Python 3.5 in this environment. Below command is used to install the Python 3.5 headers and development files:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install python3.5-dev</div></pre></td></tr></table></figure></p>
+<p>Install necessary libraries:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pip install numpy</div><div class="line">pip install matplotlib</div></pre></td></tr></table></figure></p>
+<p>You could other libraries you need.</p>
+<h2 id="Build-and-install-OpenCV-3-1-0"><a href="#Build-and-install-OpenCV-3-1-0" class="headerlink" title="Build and install OpenCV 3.1.0"></a>Build and install OpenCV 3.1.0</h2><p>Make sure you are still in virtual environment. Pull OpenCV projects from  github and checkout the 3.1.0 version:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> ~</div><div class="line">git <span class="built_in">clone</span> https://github.com/opencv/opencv.git</div><div class="line"><span class="built_in">cd</span> opencv</div><div class="line">git checkout 3.1.0</div></pre></td></tr></table></figure></p>
+<p>Meanwhile you need to grab the <em>opencv_contrib</em> repo as well. Without this repository, you will be missing some of OpenCV 3.0 features like text detection in natural images:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> ~</div><div class="line">git <span class="built_in">clone</span> https://github.com/opencv/opencv_contrib.git</div><div class="line"><span class="built_in">cd</span> opencv_contrib</div><div class="line">git checkout 3.1.0</div></pre></td></tr></table></figure></p>
+<p>Make sure that you checkout the same version for <em>opencv_contrib</em> that you did for OpenCV above, otherwise you could run into compilation errors.</p>
+<p>Next step is to build OpenCV: (I’m sharing my cmake commands. You could find different commands from other website. If mine is not working on your local machine, please find others’ build commands. There must be a list of cmake commands working in your situation)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">cmake -D CMAKE_BUILD_TYPE=RELEASE \</div><div class="line">-D CMAKE_INSTALL_PREFIX=/usr/<span class="built_in">local</span> \</div><div class="line">-D INSTALL_PYTHON_EXAMPLES=ON \</div><div class="line">-D INSTALL_C_EXAMPLES=OFF \</div><div class="line">-D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \</div><div class="line">-D PYTHON_EXECUTABLE=~/.virtualenvs/cv/bin/python3.5 \</div><div class="line">-D PYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.5m.so \</div><div class="line">-D PYTHON_LIBRARIES=/usr/lib/x86_64-linux-gnu/libpython3.5m.so \</div><div class="line">-D PYTHON3_NUMPY_INCLUDE_DIRS=~/.virtualenvs/cv/lib/python3.5/site-packages \</div><div class="line">-D BUILD_EXAMPLES=ON ..</div></pre></td></tr></table></figure></p>
+<p>In order to build OpenCV 3.1.0 , you need to set <em>-D INSTALL_C_EXAMPLES=OFF</em> (rather than ON ) in the cmake command. </p>
+<p>If your build output looks like below, then your build mostly is done successfully.<br><img src="/images/2018_03_cmake_build.png" alt="build OpenCV"></p>
+<p>CMake is now using the Python 3.5. It means OpenCV 3.1.0 will be compiled with Python 3.5. Let’s start the OpenCV compile process:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">make -j4</div></pre></td></tr></table></figure></p>
+<p>Assuming OpenCV 3.1.0 compiled without errors, you can install it on your system:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo make install</div><div class="line">sudo ldconfig</div></pre></td></tr></table></figure></p>
+<h2 id="Sym-link-OpenCV-3-1-0"><a href="#Sym-link-OpenCV-3-1-0" class="headerlink" title="Sym-link OpenCV 3.1.0"></a>Sym-link OpenCV 3.1.0</h2><p>If you’ve reached this step, OpenCV 3.1.0 should now be installed in /usr/local/lib/python3.5/site-packages/. In this folder you can see OpenCV bindings are stored under the name <em>cv2.cpython-35m.so</em>. To use OpenCV 3.1.0 within <em>cv</em> virtual environment, you need to sym-link OpenCV into <em>site-packages</em>:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> ~/.virtualenvs/cv/lib/python3.5/site-packages/</div><div class="line">ln -s /usr/<span class="built_in">local</span>/lib/python3.5/site-packages/cv2.cpython-35m.so cv2.so</div></pre></td></tr></table></figure></p>
+<p>After this, Python can import our OpenCV bindings using name <em>cv2</em></p>
+<h2 id="Test-OpenCV-3-1-0-and-Python-3-5"><a href="#Test-OpenCV-3-1-0-and-Python-3-5" class="headerlink" title="Test OpenCV 3.1.0 and Python 3.5"></a>Test OpenCV 3.1.0 and Python 3.5</h2><p>Again, make sure you are in the <em>cv</em> virtual environment, then call Pyhthon3 and try to import <em>cv2</em>:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ workon cv</div><div class="line">$ python</div><div class="line">&gt;&gt;&gt; import cv2</div><div class="line">&gt;&gt;&gt; cv2.__version__</div><div class="line"><span class="string">'3.1.0'</span></div></pre></td></tr></table></figure></p>
+<p><img src="/images/2018_03_opencv_vertification.png" alt="final vertification"></p>
+<p>Congratulations! You are able to use Python and OpenCV on computer vision projects!</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+          
+            <a href="/tags/Python3/" rel="tag"># Python3</a>
+          
+            <a href="/tags/OpenCV/" rel="tag"># OpenCV</a>
+          
+            <a href="/tags/HowTo/" rel="tag"># HowTo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/02/Fix-black-screen-Ubuntu/" rel="next" title="Fix black screen issue - Ubuntu">
+                <i class="fa fa-chevron-left"></i> Fix black screen issue - Ubuntu
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars2.githubusercontent.com/u/6347700?v=3&s=400"
+               alt="Fangyijie Wang" />
+          <p class="site-author-name" itemprop="name">Fangyijie Wang</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/13204942" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/fangyijiewang/" target="_blank" title="Linkedin">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Linkedin
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-dependencies"><span class="nav-number">1.</span> <span class="nav-text">Install dependencies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set-up-virtual-environment-for-Python-development"><span class="nav-number">2.</span> <span class="nav-text">Set up virtual environment for Python development</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Python3-5"><span class="nav-number">3.</span> <span class="nav-text">Install Python3.5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Build-and-install-OpenCV-3-1-0"><span class="nav-number">4.</span> <span class="nav-text">Build and install OpenCV 3.1.0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sym-link-OpenCV-3-1-0"><span class="nav-number">5.</span> <span class="nav-text">Sym-link OpenCV 3.1.0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Test-OpenCV-3-1-0-and-Python-3-5"><span class="nav-number">6.</span> <span class="nav-text">Test OpenCV 3.1.0 and Python 3.5</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Fangyijie Wang</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
