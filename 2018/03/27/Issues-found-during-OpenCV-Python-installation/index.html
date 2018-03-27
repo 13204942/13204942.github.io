@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Git,Tech,Hexo," />
+  <meta name="keywords" content="Ubuntu,Python3,OpenCV,HowTo,Bugs," />
 
 
 
@@ -84,18 +84,22 @@
 
 
 
-<meta name="description" content="Hexo is a fast, simple and powerful blog framework! Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask questions on G">
-<meta name="keywords" content="Git,Tech,Hexo">
+<meta name="description" content="In last article, I’ve shared my story about how to install OpenCV 3.1.0 associated with Python 3.5 on Ubuntu system. Continue with it, I’m going to share some issues I found during installation of Ope">
+<meta name="keywords" content="Ubuntu,Python3,OpenCV,HowTo,Bugs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to use Hexo">
-<meta property="og:url" content="http://wangfangyijie.cn/2016/11/19/hello-world/index.html">
+<meta property="og:title" content="Issues found during OpenCV Python installation">
+<meta property="og:url" content="http://wangfangyijie.cn/2018/03/27/Issues-found-during-OpenCV-Python-installation/index.html">
 <meta property="og:site_name" content="Fangyijie Wang">
-<meta property="og:description" content="Hexo is a fast, simple and powerful blog framework! Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask questions on G">
+<meta property="og:description" content="In last article, I’ve shared my story about how to install OpenCV 3.1.0 associated with Python 3.5 on Ubuntu system. Continue with it, I’m going to share some issues I found during installation of Ope">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2016-12-13T00:56:10.000Z">
+<meta property="og:image" content="http://wangfangyijie.cn/images/2018_03_cmake_py35.png">
+<meta property="og:image" content="http://wangfangyijie.cn/images/2018_03_error.png">
+<meta property="og:image" content="http://wangfangyijie.cn/images/2018_03_permission_err.png">
+<meta property="og:updated_time" content="2018-03-27T23:49:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How to use Hexo">
-<meta name="twitter:description" content="Hexo is a fast, simple and powerful blog framework! Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask questions on G">
+<meta name="twitter:title" content="Issues found during OpenCV Python installation">
+<meta name="twitter:description" content="In last article, I’ve shared my story about how to install OpenCV 3.1.0 associated with Python 3.5 on Ubuntu system. Continue with it, I’m going to share some issues I found during installation of Ope">
+<meta name="twitter:image" content="http://wangfangyijie.cn/images/2018_03_cmake_py35.png">
 
 
 
@@ -123,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://wangfangyijie.cn/2016/11/19/hello-world/"/>
+  <link rel="canonical" href="http://wangfangyijie.cn/2018/03/27/Issues-found-during-OpenCV-Python-installation/"/>
 
 
 
 
 
-  <title> How to use Hexo | Fangyijie Wang </title>
+  <title> Issues found during OpenCV Python installation | Fangyijie Wang </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -240,7 +244,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://wangfangyijie.cn/2016/11/19/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://wangfangyijie.cn/2018/03/27/Issues-found-during-OpenCV-Python-installation/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Fangyijie Wang">
@@ -264,7 +268,7 @@
             
             
               
-                How to use Hexo
+                Issues found during OpenCV Python installation
               
             
           </h1>
@@ -277,8 +281,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-19T02:46:54+00:00">
-                2016-11-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-27T23:38:53+01:00">
+                2018-03-27
               </time>
             
 
@@ -313,16 +317,21 @@
       
 
       
-        <p><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a> is a fast, simple and powerful blog framework! Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask questions on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server-locally"><a href="#Run-server-locally" class="headerlink" title="Run server locally"></a>Run server locally</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites-Push-codes-to-Github"><a href="#Deploy-to-remote-sites-Push-codes-to-Github" class="headerlink" title="Deploy to remote sites (Push codes to Github)"></a>Deploy to remote sites (Push codes to Github)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>In last article, I’ve shared my story about how to install OpenCV 3.1.0 associated with Python 3.5 on Ubuntu system. Continue with it, I’m going to share some issues I found during installation of OpenCV and Python. </p>
+<p>Details of my local environment:</p>
+<ul>
+<li><strong>ubuntu 16.04 LTS</strong></li>
+<li><strong>Python 3.5.2</strong></li>
+<li><strong>OpenCV 3.1.0</strong></li>
+</ul>
+<h2 id="Anaconda-installed-before-virtual-environment-setup"><a href="#Anaconda-installed-before-virtual-environment-setup" class="headerlink" title="Anaconda installed before virtual environment setup"></a>Anaconda installed before virtual environment setup</h2><p>As my last article mentions, it’s highly recommended to create virtual environment to install and use Python. However on my local machine, I installed Ananconda which includes many useful Python libs. If you are familiar with Anaconda, it is a very handy software for Python development. </p>
+<p>As I already have Anaconda (Python 3.5) on my machine, When I want to install OpenCV, I found and installed a OpenCV library associated with Anaconda. You could follow installation instructions on my last article, but skip the part of creating virtual environment. Please note you will need to change CMake commands like below:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">cmake -D CMAKE_BUILD_TYPE=RELEASE \</div><div class="line">-D CMAKE_INSTALL_PREFIX=/usr/<span class="built_in">local</span> \</div><div class="line">-D INSTALL_PYTHON_EXAMPLES=ON \</div><div class="line">-D INSTALL_C_EXAMPLES=OFF \</div><div class="line">-D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \</div><div class="line">-D PYTHON_EXECUTABLE=~/anaconda3/envs/py35/bin \</div><div class="line">-D PYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.5m.so \</div><div class="line">-D PYTHON_LIBRARIES=/usr/lib/x86_64-linux-gnu/libpython3.5m.so \</div><div class="line">-D PYTHON3_NUMPY_INCLUDE_DIRS=~/anaconda3/envs/py35/site-packages \</div><div class="line">-D BUILD_EXAMPLES=ON ..</div></pre></td></tr></table></figure></p>
+<p>You need to point <em>PYTHON_EXECUTABLE</em> and <em>PYTHON3_NUMPY_INCLUDE_DIRS</em> to location of Python 3.5 and Numpy respectively. I believe they are all in Anaconda folder. Then you can build OpenCV with CMake. I guess the output would be like below screenshot:<br><img src="/images/2018_03_cmake_py35.png" alt="cmake anaconda py35"></p>
+<p>In my case, the output says OpenCV is associated with Python 3.5 (from Anaconda). But when I try to import cv2 in Python environment, below error shown up:<br><img src="/images/2018_03_error.png" alt="cmake error"></p>
+<p>I googled lots of docs related with this error, but no luck… No solution is working for me unless I deleted Anaconda completely, create virtual environment and install everything from scratch. </p>
+<h2 id="Permission-issue"><a href="#Permission-issue" class="headerlink" title="Permission issue"></a>Permission issue</h2><p>Also, I found another permission issue maybe caused by Anaconda on my local machine. The error is shown up during CMake build:<br><img src="/images/2018_03_permission_err.png" alt="permission error"></p>
+<p>After I did lots of research on this issue, again my final stupid solution is deleteing Anaconda and start everything from scratch.</p>
+<p>Currently I only have above two issues when I was installing OpenCV and Python on Ubuntu. If you know the better solutions to solve them, please let me know ! Thanks a mil.</p>
 
       
     </div>
@@ -346,11 +355,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Git/" rel="tag"># Git</a>
+            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
           
-            <a href="/tags/Tech/" rel="tag"># Tech</a>
+            <a href="/tags/Python3/" rel="tag"># Python3</a>
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/OpenCV/" rel="tag"># OpenCV</a>
+          
+            <a href="/tags/HowTo/" rel="tag"># HowTo</a>
+          
+            <a href="/tags/Bugs/" rel="tag"># Bugs</a>
           
         </div>
       
@@ -359,15 +372,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/03/26/Ubuntu-Install-OpenCV-3-0-And-Python-3/" rel="next" title="Ubuntu Install OpenCV 3.0 And Python 3">
+                <i class="fa fa-chevron-left"></i> Ubuntu Install OpenCV 3.0 And Python 3
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/13/Configure-custom-DNS-with-Hexo/" rel="prev" title="Configure custom DNS with Hexo">
-                Configure custom DNS with Hexo <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -500,7 +513,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server-locally"><span class="nav-number">1.2.</span> <span class="nav-text">Run server locally</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites-Push-codes-to-Github"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites (Push codes to Github)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Anaconda-installed-before-virtual-environment-setup"><span class="nav-number">1.</span> <span class="nav-text">Anaconda installed before virtual environment setup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Permission-issue"><span class="nav-number">2.</span> <span class="nav-text">Permission issue</span></a></li></ol></div>
             
 
           </div>
