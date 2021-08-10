@@ -1283,7 +1283,7 @@ pre code {
 }
 .site-meta {
   flex-grow: 1;
-  text-align: left;
+  text-align: center;
 }
 @media (max-width: 767px) {
   .site-meta {
@@ -2733,7 +2733,7 @@ hr {
   text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
 }
 .posts-expand.index .post-header {
-  text-align: left;
+  text-align: center;
 }
 @media (max-width: 767px) {
   .posts-expand.index .post-header {
@@ -2863,7 +2863,7 @@ hr {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #1d16e4;
+  background: #7073df;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
