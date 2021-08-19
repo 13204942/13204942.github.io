@@ -264,7 +264,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-08-19 22:50:03 / Modified: 22:10:43" itemprop="dateCreated datePublished" datetime="2021-08-19T22:50:03Z">2021-08-19</time>
+      <time title="Created: 2021-08-19 22:50:03 / Modified: 22:14:10" itemprop="dateCreated datePublished" datetime="2021-08-19T22:50:03Z">2021-08-19</time>
     </span>
 
   
@@ -283,7 +283,7 @@
 <p>To deploy Hexo to Github, you need to install the necessary plugin(s), <em>hexo-deployer-git</em> that is compatible with the deployment method provided by your server/repository. Deployment is usually configured through <code>_config.yml</code>. A valid configuration must have the <em>type</em> field. For example:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br></pre></td></tr></table></figure>
 
-<p>At the beginning, you need to go to this <img src="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token" alt="website"> to see how to create a GitHub Personal Access Token. Once the token is generated, keep it somewhere for later use.</p>
+<p>At the beginning, you need to go to this <a target="_blank" rel="noopener" href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token">website</a> to see how to create a GitHub Personal Access Token. Once the token is generated, keep it somewhere for later use.</p>
 <p>Go to Hexo file <code>_config.yml</code>, and include below code block in it. Set the <em>token</em> parameter to be the Github token name which was just generated. </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo:</span><br><span class="line">    github:</span><br><span class="line">      url: https://github.com/&lt;myusername&gt;/&lt;myrepo&gt;.git</span><br><span class="line">      branch: &lt;branch_name&gt;</span><br><span class="line">      token: $&lt;token_name&gt;</span><br><span class="line">  name: &lt;my_visible_name&gt;</span><br><span class="line">  email: &lt;my_email&gt;</span><br></pre></td></tr></table></figure>
 
