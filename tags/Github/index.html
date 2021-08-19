@@ -18,23 +18,18 @@
     var CONFIG = {"hostname":"wangfangyijie.cn","root":"/","scheme":"Mist","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
 
-  <meta name="description" content="While using Hexo to set up a github.io blog, the default domain name is [your-github-username].github.io. To use a custom DNS for your personal blog, Github requires you to create a file named CNAME i">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Configure Custom DNS with Hexo">
-<meta property="og:url" content="https://wangfangyijie.cn/2021/08/10/DNS-with-hexo/index.html">
+  <meta name="description" content="My Own Blog World">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fangyijie Wang">
+<meta property="og:url" content="https://wangfangyijie.cn/tags/Github/index.html">
 <meta property="og:site_name" content="Fangyijie Wang">
-<meta property="og:description" content="While using Hexo to set up a github.io blog, the default domain name is [your-github-username].github.io. To use a custom DNS for your personal blog, Github requires you to create a file named CNAME i">
+<meta property="og:description" content="My Own Blog World">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-08-10T22:36:52.000Z">
-<meta property="article:modified_time" content="2021-08-10T22:15:53.877Z">
 <meta property="article:author" content="Fangyijie Wang">
-<meta property="article:tag" content="DNS">
-<meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="CNAME">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://wangfangyijie.cn/2021/08/10/DNS-with-hexo/">
+<link rel="canonical" href="https://wangfangyijie.cn/tags/Github/">
 
 
 <script class="page-configurations">
@@ -42,12 +37,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : true,
+    isPost : false,
     lang   : 'en'
   };
 </script>
 
-  <title>Configure Custom DNS with Hexo | Fangyijie Wang</title>
+  <title>Tag: Github | Fangyijie Wang</title>
   
 
 
@@ -168,7 +163,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -180,7 +175,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install"><span class="nav-number">1.</span> <span class="nav-text">Install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Enable"><span class="nav-number">2.</span> <span class="nav-text">Enable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Configure-domain-name"><span class="nav-number">3.</span> <span class="nav-text">Configure domain name</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -233,100 +227,53 @@
 </noscript>
 
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner tag posts-collapse">
       
 
       
 
-    
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://wangfangyijie.cn/2021/08/10/DNS-with-hexo/">
+  
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <h2 class="collection-header">Github
+          <small>Tag</small>
+        </h2>
+      </div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Fangyijie Wang">
-      <meta itemprop="description" content="My Own Blog World">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fangyijie Wang">
-    </span>
-
-    
-    
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Configure Custom DNS with Hexo
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
       
-
-      <time title="Created: 2021-08-10 22:36:52 / Modified: 22:15:53" itemprop="dateCreated datePublished" datetime="2021-08-10T22:36:52Z">2021-08-10</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <p>While using Hexo to set up a github.io blog, the default domain name is [your-github-username].github.io. To use a custom DNS for your personal blog, Github requires you to create a file named CNAME in master branch of your repository. Since Hexo3, if you simply added the CNAME file manually it would be overwritten at deployment time. So you could use Hexo plugin: <a target="_blank" rel="noopener" href="https://github.com/leecrossley/hexo-generator-cname">hexo-generator-cname</a>.</p>
-<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-cname --save</span><br></pre></td></tr></table></figure>
-
-<h2 id="Enable"><a href="#Enable" class="headerlink" title="Enable"></a>Enable</h2><p>Add hexo-generator-cname to plugins in <em>_config.yml</em>.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ plugins: hexo-generator-cname</span><br></pre></td></tr></table></figure>
-
-<h2 id="Configure-domain-name"><a href="#Configure-domain-name" class="headerlink" title="Configure domain name"></a>Configure domain name</h2><p>Go to <em>_config.yml</em> file, and find the variable url. Configure your custom domain name like below.</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: http://[your-custom-domain-name]</span><br></pre></td></tr></table></figure>
-<p>When you run</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>again, a CNAME file containing your custom domain name configured just now in <em>_config.yml</em> will be created.</p>
-<p>Then you need to login to your DNS provider and create a DNS CNAME record pointing hostname www to your-github-username.github.io. Here is a DNS provider I used before <a target="_blank" rel="noopener" href="https://www.alibabacloud.com/domain?spm=a2c5t.10695662.6791778070.118.4d971725hWblwC">wanwang</a>. It will take a couple hours to replicate default domain name with the custom one.</p>
-
+    <div class="collection-year">
+      <span class="collection-header">2021</span>
     </div>
 
-    
-    
-    
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2021-08-19T22:50:03Z"
+              content="2021-08-19">
+          08-19
+        </time>
+      </div>
 
-    <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/DNS/" rel="tag"># DNS</a>
-              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
-              <a href="/tags/CNAME/" rel="tag"># CNAME</a>
-          </div>
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/08/19/Deploy-Hexo-to-Github-With-Token/" itemprop="url">
+            <span itemprop="name">Deploy Hexo to Github With Token</span>
+          </a>
+      </div>
 
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2021/08/09/hello-world/" rel="prev" title="Amazing Hexo">
-                  <i class="fa fa-chevron-left"></i> Amazing Hexo
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2021/08/19/AWS-S3/" rel="next" title="AWS S3">
-                  AWS S3 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
+      
+    </header>
   </article>
+
+    </div>
+  </div>
   
   
+  
+
   
 
 

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangfangyijie.cn/2021/08/19/Deploy-Hexo-to-Github-With-Token/</loc>
+    
+    <lastmod>2021-08-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wangfangyijie.cn/2021/08/19/AWS-S3/</loc>
     
     <lastmod>2021-08-19</lastmod>
@@ -75,6 +82,13 @@
   
   <url>
     <loc>https://wangfangyijie.cn/tags/CNAME/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wangfangyijie.cn/tags/Github/</loc>
     <lastmod>2021-08-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

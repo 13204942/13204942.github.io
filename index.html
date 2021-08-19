@@ -188,14 +188,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -231,6 +231,80 @@
       
 
       
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://wangfangyijie.cn/2021/08/19/Deploy-Hexo-to-Github-With-Token/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Fangyijie Wang">
+      <meta itemprop="description" content="My Own Blog World">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fangyijie Wang">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/19/Deploy-Hexo-to-Github-With-Token/" class="post-title-link" itemprop="url">Deploy Hexo to Github With Token</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-08-19 22:50:03 / Modified: 22:10:43" itemprop="dateCreated datePublished" datetime="2021-08-19T22:50:03Z">2021-08-19</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Hexo provides a fast and easy deployment strategy. You only need one single command to deploy your site to your server. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>To deploy Hexo to Github, you need to install the necessary plugin(s), <em>hexo-deployer-git</em> that is compatible with the deployment method provided by your server/repository. Deployment is usually configured through <code>_config.yml</code>. A valid configuration must have the <em>type</em> field. For example:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br></pre></td></tr></table></figure>
+
+<p>At the beginning, you need to go to this <img src="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token" alt="website"> to see how to create a GitHub Personal Access Token. Once the token is generated, keep it somewhere for later use.</p>
+<p>Go to Hexo file <code>_config.yml</code>, and include below code block in it. Set the <em>token</em> parameter to be the Github token name which was just generated. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo:</span><br><span class="line">    github:</span><br><span class="line">      url: https://github.com/&lt;myusername&gt;/&lt;myrepo&gt;.git</span><br><span class="line">      branch: &lt;branch_name&gt;</span><br><span class="line">      token: $&lt;token_name&gt;</span><br><span class="line">  name: &lt;my_visible_name&gt;</span><br><span class="line">  email: &lt;my_email&gt;</span><br></pre></td></tr></table></figure>
+
+<p>After this, you could deploy Hexo to your Github repository. The command should be like this:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;token_name&gt;=&lt;token_value&gt; hexo deploy;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
       
   
   

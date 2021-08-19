@@ -18,23 +18,24 @@
     var CONFIG = {"hostname":"wangfangyijie.cn","root":"/","scheme":"Mist","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
 
-  <meta name="description" content="While using Hexo to set up a github.io blog, the default domain name is [your-github-username].github.io. To use a custom DNS for your personal blog, Github requires you to create a file named CNAME i">
+  <meta name="description" content="Hexo provides a fast and easy deployment strategy. You only need one single command to deploy your site to your server.  1hexo deploy  To deploy Hexo to Github, you need to install the necessary plugi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Configure Custom DNS with Hexo">
-<meta property="og:url" content="https://wangfangyijie.cn/2021/08/10/DNS-with-hexo/index.html">
+<meta property="og:title" content="Deploy Hexo to Github With Token">
+<meta property="og:url" content="https://wangfangyijie.cn/2021/08/19/Deploy-Hexo-to-Github-With-Token/index.html">
 <meta property="og:site_name" content="Fangyijie Wang">
-<meta property="og:description" content="While using Hexo to set up a github.io blog, the default domain name is [your-github-username].github.io. To use a custom DNS for your personal blog, Github requires you to create a file named CNAME i">
+<meta property="og:description" content="Hexo provides a fast and easy deployment strategy. You only need one single command to deploy your site to your server.  1hexo deploy  To deploy Hexo to Github, you need to install the necessary plugi">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-08-10T22:36:52.000Z">
-<meta property="article:modified_time" content="2021-08-10T22:15:53.877Z">
+<meta property="og:image" content="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token">
+<meta property="article:published_time" content="2021-08-19T22:50:03.000Z">
+<meta property="article:modified_time" content="2021-08-19T22:10:43.919Z">
 <meta property="article:author" content="Fangyijie Wang">
-<meta property="article:tag" content="DNS">
 <meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="CNAME">
+<meta property="article:tag" content="Github">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token">
 
 
-<link rel="canonical" href="https://wangfangyijie.cn/2021/08/10/DNS-with-hexo/">
+<link rel="canonical" href="https://wangfangyijie.cn/2021/08/19/Deploy-Hexo-to-Github-With-Token/">
 
 
 <script class="page-configurations">
@@ -47,7 +48,7 @@
   };
 </script>
 
-  <title>Configure Custom DNS with Hexo | Fangyijie Wang</title>
+  <title>Deploy Hexo to Github With Token | Fangyijie Wang</title>
   
 
 
@@ -168,7 +169,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -180,7 +181,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install"><span class="nav-number">1.</span> <span class="nav-text">Install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Enable"><span class="nav-number">2.</span> <span class="nav-text">Enable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Configure-domain-name"><span class="nav-number">3.</span> <span class="nav-text">Configure domain name</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -242,7 +242,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://wangfangyijie.cn/2021/08/10/DNS-with-hexo/">
+    <link itemprop="mainEntityOfPage" href="https://wangfangyijie.cn/2021/08/19/Deploy-Hexo-to-Github-With-Token/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -258,7 +258,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Configure Custom DNS with Hexo
+          Deploy Hexo to Github With Token
         </h1>
 
         <div class="post-meta-container">
@@ -270,7 +270,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-08-10 22:36:52 / Modified: 22:15:53" itemprop="dateCreated datePublished" datetime="2021-08-10T22:36:52Z">2021-08-10</time>
+      <time title="Created: 2021-08-19 22:50:03 / Modified: 22:10:43" itemprop="dateCreated datePublished" datetime="2021-08-19T22:50:03Z">2021-08-19</time>
     </span>
 
   
@@ -283,19 +283,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>While using Hexo to set up a github.io blog, the default domain name is [your-github-username].github.io. To use a custom DNS for your personal blog, Github requires you to create a file named CNAME in master branch of your repository. Since Hexo3, if you simply added the CNAME file manually it would be overwritten at deployment time. So you could use Hexo plugin: <a target="_blank" rel="noopener" href="https://github.com/leecrossley/hexo-generator-cname">hexo-generator-cname</a>.</p>
-<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-cname --save</span><br></pre></td></tr></table></figure>
+        <p>Hexo provides a fast and easy deployment strategy. You only need one single command to deploy your site to your server. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 
-<h2 id="Enable"><a href="#Enable" class="headerlink" title="Enable"></a>Enable</h2><p>Add hexo-generator-cname to plugins in <em>_config.yml</em>.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ plugins: hexo-generator-cname</span><br></pre></td></tr></table></figure>
+<p>To deploy Hexo to Github, you need to install the necessary plugin(s), <em>hexo-deployer-git</em> that is compatible with the deployment method provided by your server/repository. Deployment is usually configured through <code>_config.yml</code>. A valid configuration must have the <em>type</em> field. For example:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br></pre></td></tr></table></figure>
 
-<h2 id="Configure-domain-name"><a href="#Configure-domain-name" class="headerlink" title="Configure domain name"></a>Configure domain name</h2><p>Go to <em>_config.yml</em> file, and find the variable url. Configure your custom domain name like below.</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: http://[your-custom-domain-name]</span><br></pre></td></tr></table></figure>
-<p>When you run</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>again, a CNAME file containing your custom domain name configured just now in <em>_config.yml</em> will be created.</p>
-<p>Then you need to login to your DNS provider and create a DNS CNAME record pointing hostname www to your-github-username.github.io. Here is a DNS provider I used before <a target="_blank" rel="noopener" href="https://www.alibabacloud.com/domain?spm=a2c5t.10695662.6791778070.118.4d971725hWblwC">wanwang</a>. It will take a couple hours to replicate default domain name with the custom one.</p>
+<p>At the beginning, you need to go to this <img src="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token" alt="website"> to see how to create a GitHub Personal Access Token. Once the token is generated, keep it somewhere for later use.</p>
+<p>Go to Hexo file <code>_config.yml</code>, and include below code block in it. Set the <em>token</em> parameter to be the Github token name which was just generated. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo:</span><br><span class="line">    github:</span><br><span class="line">      url: https://github.com/&lt;myusername&gt;/&lt;myrepo&gt;.git</span><br><span class="line">      branch: &lt;branch_name&gt;</span><br><span class="line">      token: $&lt;token_name&gt;</span><br><span class="line">  name: &lt;my_visible_name&gt;</span><br><span class="line">  email: &lt;my_email&gt;</span><br></pre></td></tr></table></figure>
 
+<p>After this, you could deploy Hexo to your Github repository. The command should be like this:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;token_name&gt;=&lt;token_value&gt; hexo deploy;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -304,23 +303,19 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/DNS/" rel="tag"># DNS</a>
               <a href="/tags/Hexo/" rel="tag"># Hexo</a>
-              <a href="/tags/CNAME/" rel="tag"># CNAME</a>
+              <a href="/tags/Github/" rel="tag"># Github</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/08/09/hello-world/" rel="prev" title="Amazing Hexo">
-                  <i class="fa fa-chevron-left"></i> Amazing Hexo
+                <a href="/2021/08/19/AWS-S3/" rel="prev" title="AWS S3">
+                  <i class="fa fa-chevron-left"></i> AWS S3
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/08/19/AWS-S3/" rel="next" title="AWS S3">
-                  AWS S3 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
