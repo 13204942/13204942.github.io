@@ -39,27 +39,6 @@
 
   
   <url>
-    <loc>https://wangfangyijie.cn/tags/DNS/</loc>
-    <lastmod>2021-08-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wangfangyijie.cn/tags/Hexo/</loc>
-    <lastmod>2021-08-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wangfangyijie.cn/tags/CNAME/</loc>
-    <lastmod>2021-08-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wangfangyijie.cn/tags/AWS/</loc>
     <lastmod>2021-08-19</lastmod>
     <changefreq>daily</changefreq>
@@ -75,6 +54,27 @@
   
   <url>
     <loc>https://wangfangyijie.cn/tags/Cloud/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wangfangyijie.cn/tags/DNS/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wangfangyijie.cn/tags/Hexo/</loc>
+    <lastmod>2021-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wangfangyijie.cn/tags/CNAME/</loc>
     <lastmod>2021-08-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
