@@ -188,14 +188,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -231,6 +231,159 @@
       
 
       
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://wangfangyijie.cn/2021/08/19/AWS-S3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Fangyijie Wang">
+      <meta itemprop="description" content="My Own Blog World">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fangyijie Wang">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/19/AWS-S3/" class="post-title-link" itemprop="url">AWS S3</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-08-19 21:48:06 / Modified: 21:03:49" itemprop="dateCreated datePublished" datetime="2021-08-19T21:48:06Z">2021-08-19</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="What-is-S3"><a href="#What-is-S3" class="headerlink" title="What is S3 ?"></a><strong>What is S3 ?</strong></h2><ul>
+<li>Object Based</li>
+<li>Files &lt;= <span style="color:#fcbe03">5 TB</span></li>
+<li>No OS or DB storage</li>
+<li>Unlimited Storage</li>
+<li>Universal namespace</li>
+</ul>
+<h2 id="What-is-S3-Object"><a href="#What-is-S3-Object" class="headerlink" title="What is S3 Object?"></a>What is S3 Object?</h2><ul>
+<li>Key * Object name</li>
+<li>Value * The data itself (made up of bytes)</li>
+<li>Version ID</li>
+<li>Metadata * Data about the data you are storing</li>
+</ul>
+<h2 id="S3-Security"><a href="#S3-Security" class="headerlink" title="S3 Security"></a>S3 Security</h2><ul>
+<li>Buckets are private by default (includes all objects within it)</li>
+<li>Object ACLs: Make individual objects public</li>
+<li>Bucket policies: Make entire buckets public</li>
+<li>HTTP status code: When uploading an object to S3 successfully</li>
+</ul>
+<h2 id="S3-Versioning"><a href="#S3-Versioning" class="headerlink" title="S3 Versioning"></a>S3 Versioning</h2><ul>
+<li>All Versions: All Versions of an object are in S3. (writes and deletes)</li>
+<li>Backup: a great backup tool</li>
+<li>Cannot Be Disabled: Once enabled, it cannot be disabled * only suspended</li>
+<li>Lifecycle Rules: Can be integrated with lifecycle rules</li>
+<li>Supports MFA: Can support multi-factor authentication</li>
+</ul>
+<h2 id="S3-Lifecycle-Management"><a href="#S3-Lifecycle-Management" class="headerlink" title="S3 Lifecycle Management"></a>S3 Lifecycle Management</h2><ul>
+<li>Automates moving objects between the different storage tiers</li>
+<li>Can be used in conjunction with versioning</li>
+<li>Can be applied to current versions and previous versions</li>
+</ul>
+<h2 id="S3-Object-Lock-and-Glacier-Vault-Lock"><a href="#S3-Object-Lock-and-Glacier-Vault-Lock" class="headerlink" title="S3 Object Lock and Glacier Vault Lock"></a><strong>S3 Object Lock and Glacier Vault Lock</strong></h2><ul>
+<li>Object Lock<ul>
+<li>Store objects using a write once, read many (<span style="color:#fcbe03">WORM</span>) model</li>
+<li>Can be on individual objects or applied across the bucket</li>
+<li>It comes in two modes: <strong>governance mode</strong> (protect objects against most users unless they have special permissions) &amp; <strong>compliance mode</strong> (protect objects against <strong>any</strong> users)</li>
+</ul>
+</li>
+<li>Glacier Vault Lock<ul>
+<li>Allows you to deploy and enforce compliance controls for individual S3 Glacier vaults with a vault lock policy. You can specify controls, e.g. WORM, in a vault lock policy and lock the policy from future edits. Once locked, the policy cannot be changed</li>
+</ul>
+</li>
+</ul>
+<h2 id="S3-Encryption"><a href="#S3-Encryption" class="headerlink" title="S3 Encryption"></a><strong>S3 Encryption</strong></h2><ul>
+<li>Encryption in Transit<ul>
+<li>SSL/TLS</li>
+<li>HTTPS</li>
+</ul>
+</li>
+<li>Encryption at Rest<ul>
+<li>Server-side encryption</li>
+<li>SSE-S3 (AES 256-bit)</li>
+<li>SSE-KMS</li>
+<li>SSE-C</li>
+</ul>
+</li>
+<li>Client-Side Encryption<ul>
+<li>Encrypt the files before you upload them to S3</li>
+</ul>
+</li>
+<li>Encryption with a Bucket Policy<ul>
+<li>A bucket policy can deny all PUT requests that do not include the x-amz-server-side-encryption parameter in the request header</li>
+</ul>
+</li>
+</ul>
+<h2 id="Optimizing-S3-Performance"><a href="#Optimizing-S3-Performance" class="headerlink" title="Optimizing S3 Performance"></a>Optimizing S3 Performance</h2><ul>
+<li>Prefix<ul>
+<li>More prefix and more requests per second.</li>
+<li>You can achieve a number of requests: <span style="color:#fcbe03">3,500 PUT / COPY / POST / DELETE</span> and <span style="color:#fcbe03">5,500 GET / HEAD</span> per second , per prefix</li>
+</ul>
+</li>
+<li>SSE-KMS limits * when using it to encrypt objects in S3, keep in mind the limits<ul>
+<li>Uploading/downloading count toward the KMS quota</li>
+<li>Region-specific, it’s either <span style="color:#fcbe03">5,500</span>, <span style="color:#fcbe03">10,000</span> or <span style="color:#fcbe03">30,000</span> requests per second</li>
+<li>You cannot request a quota increase for KMS</li>
+</ul>
+</li>
+<li>Tips:<ul>
+<li>Use multipart uploads to increase performance when uploading files</li>
+<li>Files &gt; <span style="color:#fcbe03">100 MB</span> (<strong>should</strong> use multipart uploads). Files &gt; <span style="color:#fcbe03">5 GB</span> (<strong>must</strong> use multipart uploads)</li>
+<li>User S3 byte-range fetches to increase performance when downloading files</li>
+</ul>
+</li>
+</ul>
+<h2 id="S3-Replication"><a href="#S3-Replication" class="headerlink" title="S3 Replication"></a>S3 Replication</h2><ul>
+<li>Replicate objects from one bucket to another</li>
+<li>Existing objects are not replicated automatically</li>
+<li>Delete markers are not replicated by default</li>
+</ul>
+<p><img src="/.cn//08/19/AWS-S3/aws_s3.png" alt="S3 Comparison"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
       
   
   
